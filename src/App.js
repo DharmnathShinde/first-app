@@ -1,9 +1,11 @@
 import React from "react";
-import Forms from "./component/forms/Form";
-import Video from "./component/video/Video"
-import Jsx from "./component/jsx/Jsx";
-
+import Car from "./component/props/Car";
+import Welcome from "./component/sample/Welcome"
 function App(){
-return ( <Jsx/>)
+return ( <>
+   <Car name="swift"/>
+   <Welcome/>
+  </>
+)
 }
 export default App;

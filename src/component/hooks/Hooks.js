@@ -21,6 +21,9 @@ import Video from './video';
     <div className="App" style={{
       backgroundColor:`${count ===1 ? "White":color}`,
     }}>
+
+
+
     <button onClick={()=>decreament()}>-</button>
     <span >{count}</span>
 
