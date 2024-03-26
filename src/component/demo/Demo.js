@@ -3,9 +3,9 @@ import React from "react";
 import { ReactDOM } from "react";
 function Demo(props){
   
-  return(<>  <img src={props.link} alt="" />;
+  return(<>  <img src={props.img} alt="" />;
   <h1>{props.name}</h1>
-  <h3>{props.description}</h3>
+  <h3><link rel="stylesheet" href={props.link} /></h3>
     </>
   )
 }

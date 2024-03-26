@@ -1,13 +1,15 @@
 import React from "react";
-import Car from "./component/props/Car";
-import Welcome from "./component/sample/Welcome"
-import Lifecycle from "./react lifecycle/Lifecycle";
-import Movie from "./component/demo/Movie";
+import ConditionRender from "./ConditionRender";
+import List,{Number} from "./List";
+import EventHandling from "./EventHandling";
+
 
 function App(){
+   let age= prompt("enter tour age")
 return ( <>
-<Movie/>
-  </>
-)
+<ConditionRender age={age}/>
+<ol>{Number.map((numbe) => <List num={numbe} />)}</ol>
+<EventHandling/>
+  </>)
 }
 export default App;
