@@ -6,3 +6,9 @@ button{
   width: 100vw;
   height: 40vw;
 }
+.carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
