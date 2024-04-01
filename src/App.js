@@ -1,23 +1,41 @@
-import React from "react";
-import ConditionRender from "./ConditionRender";
-import List,{Number} from "./List";
-import EventHandling from "./EventHandling";
-import Binding from "./Binding";
-import Binding2 from "./Binding2";
-import Form from "./Form";
-import Form2 from "./Form2";
-import Form3 from "./Form3";
-import  Carousl  from "./Carousl";
-function App(){
+import React from 'react';
+import ConditionRender from './ConditionRender';
+import Form3 from './Form3';
+import Carousl from './Carousl';
+import Promise from './Promise';
+import Routers from './Routers';
+import About from './About';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Contact from './Contact';
+import Api, { Info } from './Api';
 
-return ( <>
-<Binding/>
- 
-<Binding2/>
-  {/* <Form/> */}
-  {/* <Form2/> */}
-  {/* <Form3/> */}
-{/* <Carousl/> */}
-  </>)
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Routers />
+    },
+    {
+      path: '/about',
+      element: <><Routers /><About /></>
+    },
+    {
+      path: '/contact',
+      element: <><Routers /><Contact /></>
+    },
+    {
+      loader:Info,
+      path: '/api',
+      element: <Api />
+      
+    }
+  ]);
+  
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
+
 export default App;
