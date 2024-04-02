@@ -11,4 +11,15 @@ button{
   grid-template-columns: 1fr 1fr 1fr;
   
 }
+.grid{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.grid>ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
+}
+.grid>ul>li{
+  list-style-type: none;  
+}
